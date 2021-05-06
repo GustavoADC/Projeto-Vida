@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Love Loves";
+    src: url("../../../fontes/LoveLoves/Lover\ Loves.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Love Match";
+    src: url("../../../fontes/LoveMatch/LoveMatch.otf") format("opentype");
+}
+h1{
+    font: normal 2em "Love Match";
+    text-align: center;
+}
+h2{
+    font: normal 2em "Love Loves";
+    margin-left: 15%;
+}
+p{
+    font: normal 25px "Love Loves";
+    text-justify: auto;
+}
