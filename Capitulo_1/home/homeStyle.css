@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Love Loves";
+    src: url("../../../fontes/LoveLoves/Lover\ Loves.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Love Match";
+    src: url("../../../fontes/LoveMatch/LoveMatch.otf") format("opentype");
+}
+body{
+    background-color: #61CDFF;
+}
+h1{
+    font: normal 2em "Love Match";
+    text-align: center;
+    color: #fff;
+}
+h2{
+    font: normal 2em "Love Loves";
+    margin-left: 15%;
+    color: #ff7a8c;
+}
+h3{
+    font: normal 25px "Love Loves";
+    margin-left: 5%;
+    margin-top: -2%;
+    color: black;
+}
+a{
+    color: #fff;
+}
+p{
+    font: normal 25px "Love Loves";
+    text-justify: auto;
+}
