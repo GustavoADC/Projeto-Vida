@@ -7,7 +7,8 @@
     font-family: "Love Match";
     src: url("../../../fontes/LoveMatch/LoveMatch.otf") format("opentype");
 }
-body{
+body{ 
+    background-image: url('../../imagens/fundo_coração.png');
     background-color: #61CDFF;
 }
 h1{
@@ -32,4 +33,53 @@ a{
 p{
     font: normal 25px "Love Loves";
     text-justify: auto;
+}
+header{
+    background-color: #ff7a8c;
+    border-radius: 10px;
+}
+.topico{                       /*Bordas dos h2*/
+    background-color: #fff;
+    width: 20%;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+}
+@media screen and (max-width: 600px) { /*Tela de Celular*/
+    .topico{
+        width: 250px;
+        text-align: center;
+    }
+}
+.introducao{
+    max-width: 1250px;
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+    padding: 1px 0;
+    /*display: flex;
+    flex-wrap: nowrap;*/
+}
+@media screen and (max-width: 600px) { /*Tela de Celular*/
+    .paragrafo{
+        width: 400px;
+        background-color: #fff;
+        margin: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #000;
+    }
+}
+@media screen and (max-width: 600px) { /*Tela de Celular*/
+    .capitulos{
+        width: 450px;
+        background-color: #ff7a8c;
+        margin: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #000;
+        text-align: center;
+    }
 }
