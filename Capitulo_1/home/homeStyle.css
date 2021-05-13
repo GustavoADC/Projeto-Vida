@@ -7,9 +7,128 @@
     font-family: "Love Match";
     src: url("../../../fontes/LoveMatch/LoveMatch.otf") format("opentype");
 }
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.menu_lat{
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    background-color: #1e1e1e;
+    transition: all .5s ease;
+}
+.menu_lat header{
+    font-size: 28px;
+    color: rgba(255, 122, 140, 0.788);
+    line-height: 70px;
+    text-align: center;
+    background: #1b1b1b;
+    user-select: none;
+}
+.menu_lat a{
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-left: 5px solid transparent;
+    transition: all .5s ease;
+}
+a.active,a:hover{
+    border-left: 7px solid #ff7a8c;
+    color: #ff7a8c;
+}
+.menu_lat a i{
+    font-size: 23px;
+    margin-right: 5px;
+}
+.menu_lat a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#check{
+    display: none;
+}
+label #active,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    color: rgba(255, 122, 140, 0.788);
+    border-radius: 5px;
+    border: 1px solid #262626;
+    margin: 5px 10px;
+    font-size: 28px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+}
+label #cancel{
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ .menu_lat{
+    left: 0;
+}
+#check:checked ~ label #active{
+    margin-left: 240px;
+    opacity: 0;
+    visibility: hidden;
+}
+#check:checked ~ label #cancel{
+    margin-left: 240px;
+    opacity: 1;
+    visibility: visible;
+}
+                /*Aqui com a tela pequena*/
+@media(max-width: 860px){.menu_lat{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+    }
+    header,#active,#cancel{
+        display: none;
+    }
+    span{
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    span.maior, a:hover{
+        height: 60px;
+        width: 279px;
+        margin-top: -1px;
+        background: inherit;
+    }
+    .menu_lat a{
+        height: 60px;
+    }
+    .menu_lat a i{
+        margin-left: -10px;
+    }
+    a:hover{
+        width: 280px;
+        background: inherit;
+    }
+    .menu_lat a:hover span{
+        opacity: 1;
+        visibility: visible;
+    }
+}
 body{ 
     background-image: url('../../imagens/fundo_coração.png');
     background-color: #61CDFF;
+    font: normal 20px 'Arial';
 }
 h1{
     font: normal 2em "Love Match";
@@ -45,33 +164,29 @@ header{
     border-radius: 20px;
     text-align: center;
 }
-@media screen and (max-width: 600px) { /*Tela de Celular*/
+@media screen and (max-width: 840px) { /*Tela de Celular*/
     .topico{
         width: 250px;
         text-align: center;
     }
-}
-.introducao{
-    max-width: 1250px;
-    background-color: white;
-    border-radius: 50px;
-    margin: auto;
-    padding: 1px 0;
-    /*display: flex;
-    flex-wrap: nowrap;*/
-}
-@media screen and (max-width: 600px) { /*Tela de Celular*/
-    .paragrafo{
-        width: 400px;
-        background-color: #fff;
+    .introducao{
+        max-width: 1250px;
+        background-color: white;
+        border-radius: 50px;
         margin: auto;
-        border-radius: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        color: #000;
+        padding: 1px 0;
+        /*display: flex;
+        flex-wrap: nowrap;*/
     }
-}
-@media screen and (max-width: 600px) { /*Tela de Celular*/
+    .paragrafo{
+            width: 400px;
+            background-color: #fff;
+            margin: auto;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            color: #000;
+    }
     .capitulos{
         width: 450px;
         background-color: #ff7a8c;
