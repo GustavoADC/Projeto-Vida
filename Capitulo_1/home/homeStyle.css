@@ -34,7 +34,7 @@
     width: 100%;
     color: white;
     line-height: 65px;
-    padding-left: 30px;
+    padding-left: 15px;
     box-sizing: border-box;
     border-bottom: 1px solid black;
     border-top: 1px solid rgba(255, 255, 255, .1);
@@ -46,8 +46,8 @@ a.active,a:hover{
     color: #ff7a8c;
 }
 .menu_lat a i{
-    font-size: 23px;
-    margin-right: 5px;
+    font-size: 20px;
+    margin-right: 0px;
 }
 .menu_lat a span{
     letter-spacing: 1px;
